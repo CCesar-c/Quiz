@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de programação</title>
+    <style>
+        
+    .login-container button{
+        margin-bottom: 20px;
+        width: 100vh; 
+        height: 10vh; 
+        padding: 12px;
+        padding-top: 15px; 
+        border: none; 
+        font-size: 20px; 
+        font-weight: bold; 
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+        }
+    .login-container{
+        justify-content:center;
+        background-color: #400000;
+        border-radius: 13px;
+        width: 1000px;
+        height: 230px;
+    }
+    h1{
+        color: white;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to bottom, #c70000, #400000, #100000);
+        text-align: center;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-container button:hover{
+        transform: scale(1.1);
+        transition: (0.4s);
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    </style>
+</head>
+
+
+<body>
+    <script>
+        function new_aba(){
+            var getvalue = localStorage.getItem("nome");
+            var getpoints= localStorage.getItem("pontos");
+            var bton_change = document.getElementById("change_name");
+
+            if(getvalue == null){
+                window.open("login.html")
+
+            }else if(getvalue != null){
+                alert("Usuario cadastrado: " + getvalue + "\nUltima pontuaçao: " + getpoints);
+                window.open("QuizV3.html")
+            }
+            
+        }
+    </script>
+    <div class="login-container">
+        <form >
+            <br>
+            <h1><ins>Quiz de Progamação</ins></h1>
+            <button onclick="new_aba()" >Começar</button>
+            <br>
+            <a href="login.html">Ja tem conta? troque de nome..!!</a>
+        </form>
+
+    </div>
+</body>
+</html>
