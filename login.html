@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>logar</title>
+    <script src="script.js"></script>
 
     <style>
         * {
@@ -66,25 +67,16 @@
     </style>
 </head>
 <body>
-    <form action="login.php" method="POST" >
+    <form>
         <div class="login-container"> 
             <h1>Login</h1>
             <div>
                 <input type="text" placeholder="Usuario" id="input">
             </div>
             <div>
-                <button  name="submit" type="submit" onclick="setValor();" >Entrar</button>
+                <button  name="submit" type="button" onclick="setValor();" >Entrar</button>
            </div>
         </div>
     </form>
-    <script>
-        function setValor(){
-            var valor  = document.getElementById("input").value;
-            localStorage.setItem("nome", valor);
-            var getvalue = localStorage.getItem("nome");
-            var getpoints= localStorage.getItem("pontos");
-            window.open("QuizV3.html")
-        }
-    </script>
 </body>
 </html>
